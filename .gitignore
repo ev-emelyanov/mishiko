@@ -2,3 +2,7 @@
 .git
 psd
 /mishka.md
+/node_modules/
+/less/style.css
+/css/style.css
+/css/style.min.css
