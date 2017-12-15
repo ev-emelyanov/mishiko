@@ -3,35 +3,34 @@
   "version": "0.1.0",
   "description": "miho",
   "private": true,
-  "main": "gulpfile.js",
-  "dependencies": {
-    "animate.css": "^3.5.2",
-    "gulp": "^3.9.1"
-  },
   "devDependencies": {
+    "autoprefixer": "7.1.x",
+    "browser-sync": "2.18.x",
+    "gulp": "3.9.x",
+    "gulp-less": "3.3.x",
+    "gulp-plumber": "1.1.x",
+    "gulp-postcss": "7.0.x",
     "@htmlacademy/editorconfig-cli": "0.1.x",
-    "autoprefixer": "^6.5.0",
-    "browser-sync": "^2.17.0",
-    "css-mqpacker": "^6.0.0",
-    "del": "^2.2.2",
-    "gulp": "^3.9.1",
-    "gulp-csso": "^3.0.0",
-    "gulp-imagemin": "^3.2.0",
-    "gulp-less": "^3.1.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-postcss": "^6.2.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-svgmin": "^1.2.4",
-    "gulp-svgstore": "^6.1.0",
-    "gulp-uncss": "^1.0.6",
-    "run-sequence": "^1.2.2"
+    "stylelint": "8.1.x",
+    "stylelint-config-htmlacademy": "0.1.x"
   },
   "editorconfig-cli": [
     "*.html",
-    "*.json"
+    "*.json",
+    "*.js",
+    "js/**/*.js",
+    "img/**/*.svg",
+    "less/**/*.less"
+  ],
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
   ],
   "scripts": {
-    "test": "editorconfig-cli check *",
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint 'less/**/*.less' --syntax less",
+    "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp style",
     "start": "gulp serve"
   },
