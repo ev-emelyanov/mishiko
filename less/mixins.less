@@ -19,3 +19,20 @@
   font-size: 27px;
   line-height: 30px;
 }
+
+
+.link-decor() {
+  text-decoration: none;
+}
+
+.link-color() {
+  color: @main-text;
+
+  &:hover {
+    color: @main-text-hover;
+  }
+
+  &:active {
+    color: @main-text-down;
+  }
+}
