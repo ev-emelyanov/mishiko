@@ -1,8 +1,30 @@
 .main-nav__toggler {
   width: 80px;
   height: 80px;
-
   font-size: 0;
-
+  background-color: #fff;
+}
+.main-nav__toggler--open {
   background: url("/img/menu.png") no-repeat center;
+}
+.main-nav__toggler--close {
+  position: relative;
+}
+.main-nav__toggler--close::after,
+.main-nav__toggler--close::before {
+  position: absolute;
+  top: 39px;
+  left: 50%;
+  margin-left: -15px;
+  content: '';
+  width: 30px;
+  height: 2px;
+  background: #000;
+}
+
+.main-nav__toggler--close::after {
+  transform: rotate(45deg);
+}
+.main-nav__toggler--close::before {
+  transform: rotate(-45deg);
 }
