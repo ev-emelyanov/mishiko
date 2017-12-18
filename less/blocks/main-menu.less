@@ -1,8 +1,50 @@
 .main-menu {
+  font-size: @big-link-fz;
+  line-height: @base-lh;
+  font-weight: bold;
   list-style: none;
 }
 
 .main-menu__link {
+  display: block;
+  padding: 30px 0 30px 45px;
+
   .link-decor();
   .link-color();
+
+}
+
+.main-menu__link {
+  position: relative;
+}
+
+.main-menu__link::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0;
+  height: 0;
+  margin-top: -9px;
+  background: url("/img/sprite.png") no-repeat;
+}
+
+.main-menu__link--search::before {
+  width: 20px;
+  height: 19px;
+  background-position: -817px -25px;
+}
+
+.main-menu__link--search:hover::before {
+  background-position: -845px -25px;
+}
+
+.main-menu__link--cart::before {
+  width: 22px;
+  height: 20px;
+  background-position: -816px -2px;
+}
+
+.main-menu__link--cart:hover::before {
+  background-position: -842px -2px;
 }
