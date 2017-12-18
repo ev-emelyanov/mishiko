@@ -1,5 +1,6 @@
 .big-text() {
-  font-size: @big-link-size;
+  font-size: @big-link-fz;
+  line-height: @big-link-lh;
   color: @main-text;
 
   &:hover {
@@ -11,12 +12,20 @@
   }
 }
 .main-text() {
-  font-family: @base-font-family;
-  font-size: @link-size;
+  font-family: @base-ff;
+  font-size: @link-fz;
+  line-height: @base-lh;
   color: @paragraph;
 }
+
 .title_1() {
   font-size: 27px;
+  line-height: 30px;
+}
+
+.title_2() {
+  margin: 0;
+  font-size: 25px;
   line-height: 30px;
 }
 

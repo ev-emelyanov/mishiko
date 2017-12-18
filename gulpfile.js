@@ -23,7 +23,7 @@ gulp.task("serve", ["style"], function() {
     server.init({
         server: ".",
         notify: false,
-        open: true,
+        open: false,
         cors: true,
         ui: false
     });
