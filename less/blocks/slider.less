@@ -1,0 +1,56 @@
+.slider__toggler {
+  width: 100%;
+  height: 52px;
+  margin-top: 25px;
+}
+
+.slider__btn {
+  display: inline-block;
+  vertical-align: baseline;
+  width: 50%;
+  height: 100%;
+  font-size: 0;
+  border: 1px solid #CCC;
+  background: #ffffff;
+}
+
+.slider__btn--next {
+  position: relative;
+  float: right;
+  border-left: none;
+}
+
+.slider__btn--prev {
+  position: relative;
+  float: left;
+}
+
+.slider__btn--next::before,
+.slider__btn--prev::before {
+  position: absolute;
+  content: '';
+  top: 11px;
+  left: 50%;
+  margin-left: -26px;
+  width: 52px;
+  height: 28px;
+  background: url("/img/sprite.png") no-repeat -390px -69px;
+}
+
+.slider__btn--next:hover::before,
+.slider__btn--prev:hover::before {
+  opacity: .6;
+}
+
+.slider__btn--next:active::before,
+.slider__btn--prev:active::before {
+  opacity: .3;
+}
+
+.slider__btn--next::before {
+  transform: rotate(180deg);
+}
+
+.slider__btn--prev::before {
+  top: 13px;
+}
