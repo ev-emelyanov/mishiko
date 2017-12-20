@@ -52,3 +52,29 @@
     color: @clr-main-text-down;
   }
 }
+
+.white-btn-link() {
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding-top: 13px;
+
+  color: @clr-dark-grey;
+  background: @clr-white-btn;
+  font-size: @big-link-fz;
+  line-height: @big-link-lh;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  border: 2px solid @clr-dark-grey;
+
+  &:hover {
+    color: @clr-white-btn;
+    background: @clr-dark-grey;
+  }
+
+  &:active {
+    color: fade(@clr-white-btn, 30%);
+    background: @clr-dark-grey;
+  }
+}
