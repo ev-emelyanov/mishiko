@@ -1,3 +1,18 @@
 .page {
   font-family: @base-ff;
 }
+
+.mail-link {
+  padding-bottom: 2px;
+  color: @clr-dark-grey;
+  border-bottom: 1px solid @clr-green-darken-hover;
+
+  &:hover {
+    color: @clr-green-darken-hover;
+  }
+
+  &:active {
+    color: fade(@clr-green-darken-hover, 30%);
+    border-bottom: 1px solid fade(@clr-green-darken-hover, 30%);
+  }
+}
