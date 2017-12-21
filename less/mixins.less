@@ -36,6 +36,10 @@
   font-weight: bold;
 }
 
+.reset() {
+  margin: 0;
+  padding: 0;
+}
 
 .link-decor() {
   text-decoration: none;
@@ -77,4 +81,13 @@
     color: fade(@clr-white-btn, 30%);
     background: @clr-dark-grey;
   }
+}
+
+.pseudo(@top: 0, @left: 0, @width, @height) {
+  position: absolute;
+  content: '';
+  top: @top;
+  left: @left;
+  width: @width;
+  height: @height;
 }
