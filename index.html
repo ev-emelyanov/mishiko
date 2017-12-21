@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"/>
   <link rel="stylesheet" href="css/style.css">
   <title>Main</title>
 </head>
 <body class="page-main">
+<div class="modal__fade"></div>
 <header class="page-main__header main-header">
   <a class="main-header__logo">
     <img src="img/mishka-logo-mobile.png" alt="logo" class="main-header__img" width="86" height="35">
@@ -133,16 +134,30 @@
 </footer>
 
 <div class="modal modal-cart">
-  <h2 class="modal__title">добавить в корзину</h2>
-  <p class="modal__hint">выберите размер:</p>
+  <h2 class="modal__title">добавить<br>
+                           в корзину</h2>
+  <p class="modal__hint">Выберите размер:</p>
   <form action="https://echo.htmlacademy.ru" class="modal-cart__list" name="cart">
-    <label class="modal-cart__label"><input class="modal-cart__size" type="radio" name="size" value="s">s</label>
-    <label class="modal-cart__label"><input class="modal-cart__size" type="radio" name="size" value="m">m</label>
-    <label class="modal-cart__label"><input class="modal-cart__size" type="radio" name="size" value="l">l</label>
+    <ul class="modal-cart__container">
+      <li class="modal-cart__item">
+        <input class="modal-cart__size" type="radio" name="size" value="s" id="order-s">
+        <label class="modal-cart__label" for="order-s">s</label>
+      </li>
+      <li class="modal-cart__item">
+        <input class="modal-cart__size" type="radio" name="size" value="m" id="order-m">
+        <label class="modal-cart__label" for="order-m">m</label>
+      </li>
+      <li class="modal-cart__item">
+        <input class="modal-cart__size" type="radio" name="size" value="l" id="order-l">
+        <label class="modal-cart__label" for="order-l">l</label>
+      </li>
+    </ul>
     <button class="modal-cart__btn btn" type="submit">добавить</button>
   </form>
-  <div class="modal__fade"></div>
 </div>
-<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9561ca7d9c73440b2402c3b0849fa668356b31136e9b4eb48f4deabdae3ae594&amp;id=js-yandex-map&amp;max-width=500&amp;height=457&amp;lang=ru_RU&amp;scroll=true"></script>
+<script type="text/javascript"
+        charset="utf-8"
+        async
+        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9561ca7d9c73440b2402c3b0849fa668356b31136e9b4eb48f4deabdae3ae594&amp;id=js-yandex-map&amp;max-width=500&amp;height=457&amp;lang=ru_RU&amp;scroll=true"></script>
 </body>
 </html>

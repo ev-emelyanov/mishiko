@@ -1,0 +1,96 @@
+.modal__fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  opacity: .9;
+}
+
+.modal {
+  position: fixed;
+  top: 20%;
+  z-index: 10;
+  padding: 35px 30px 45px;
+  background: #ffffff;
+  color: @clr-dark-grey;
+  border: 1px solid #CCC;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.modal-cart {
+  min-height: 336px;
+  min-width: 320px;
+}
+
+.modal__title {
+  .title_2();
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.modal__hint {
+  font-size: @base-fz;
+  line-height: 30px;
+  text-align: center;
+}
+
+.modal-cart__btn {
+  display: block;
+  width: 100%;
+  height: 52px;
+  margin-top: 30px;
+  background: @clr-green;
+  color: @clr-white-btn;
+  font-size: @big-link-fz;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  &:hover {
+    height: 57px;
+    margin-top: 25px;
+  }
+
+  &:active {
+    color: fade(@clr-white-btn, 30%);
+  }
+}
+
+.modal-cart__container {
+  .reset();
+  list-style:none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-cart__item {
+  flex-basis: 80px;
+
+}
+
+.modal-cart__label {
+  display: block;
+  height: 50px;
+  color: @clr-dark-grey;
+  line-height: 45px;
+  font-size: @big-link-fz;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  border: 2px solid fade(@clr-dark-grey, 10%);
+  cursor: pointer;
+}
+
+.modal-cart__size {
+  display: none;
+
+  &:hover + .modal-cart__label {
+    border-color: fade(@clr-dark-grey, 30%);
+  }
+
+  &:checked + .modal-cart__label {
+    border-color: @clr-green-btn;
+  }
+}
