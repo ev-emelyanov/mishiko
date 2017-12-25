@@ -1,0 +1,48 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  .link-decor();
+}
+
+body {
+  min-width: @mobile-width;
+  font-size: @base-fz;
+  line-height: @base-lh;
+  font-family: @base-ff;
+  color: @clr-main-text;
+
+  background-color: #ffffff;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+
+  body {
+    min-width: @tablet-width;
+  }
+
+}
+
+@media (min-width: @desktop-width) {
+
+  body {
+    min-width: @desktop-width;
+  }
+
+}
