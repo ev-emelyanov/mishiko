@@ -18,30 +18,30 @@
 
   .link-decor();
   .link-color();
-}
 
-.main-menu__link::before {
-  .pseudo(50%, 30px, 0, 0);
-  margin-top: -9px;
-  background: url("/img/sprite.png") no-repeat;
-}
+  &::before {
+    .pseudo(50%, 30px, 0, 0);
+    margin-top: -9px;
+    background: url("/img/sprite.png") no-repeat;
+  }
 
-.main-menu__link--search::before {
-  width: 20px;
-  height: 19px;
-  background-position: -817px -25px;
-}
+  &--search::before {
+    width: 20px;
+    height: 19px;
+    background-position: -817px -25px;
+  }
 
-.main-menu__link--search:hover::before {
-  background-position: -845px -25px;
-}
+  &--search:hover::before {
+    background-position: -845px -25px;
+  }
 
-.main-menu__link--cart::before {
-  width: 22px;
-  height: 20px;
-  background-position: -816px -2px;
-}
+  &--cart::before {
+    width: 22px;
+    height: 20px;
+    background-position: -816px -2px;
+  }
 
-.main-menu__link--cart:hover::before {
-  background-position: -842px -2px;
+  &--cart:hover::before {
+    background-position: -842px -2px;
+  }
 }
