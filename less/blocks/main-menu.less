@@ -3,23 +3,25 @@
   line-height: @base-lh;
   font-weight: bold;
   list-style: none;
+  .reset();
 }
 
-.main-menu__link {
-  display: block;
-  padding: 30px 0 30px 45px;
-
-  .link-decor();
-  .link-color();
-
+.main-menu__item {
+  border-bottom: 1px solid @clr-grey-border;
 }
 
 .main-menu__link {
   position: relative;
+  display: block;
+  .center-alignment(@mobile-width);
+  padding: 30px 0 30px 75px;
+
+  .link-decor();
+  .link-color();
 }
 
 .main-menu__link::before {
-  .pseudo(50%, 0, 0, 0);
+  .pseudo(50%, 30px, 0, 0);
   margin-top: -9px;
   background: url("/img/sprite.png") no-repeat;
 }
