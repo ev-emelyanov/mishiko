@@ -1,17 +1,24 @@
+.catalog-menu {
+  display: flex;
+
+  .reset();
+}
+
 .catalog-menu__item {
   list-style: none;
 }
 
 .catalog-menu__link {
+  display: block;
   .link-color();
   .link-decor();
   color: #ffffff;
-}
 
-.catalog-menu__link--interior {
-  background-color: @clr-green;
-}
+  &--interior {
+    background-color: @clr-green;
+  }
 
-.catalog-menu__link--toys {
-  background-color: @clr-green-darken;
+  &--toys {
+    background-color: @clr-green-darken;
+  }
 }
