@@ -2,7 +2,7 @@
 <html lang="ru" class="page">
 <head>
   <meta charset="UTF-8">
-  <!--<meta name="viewport" content="width=device-width">-->
+  <meta name="viewport" content="width=device-width">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"/>
   <link rel="stylesheet" href="css/style.css">
@@ -11,14 +11,14 @@
 <body class="page-main">
 <div class="modal__fade" style="display: none;"></div>
 <header class="page-main__header main-header">
-  <nav class="main-header__nav main-nav">
+  <nav class="main-header__nav main-nav main-nav--nojs">
     <div class="main-nav__logo-wrapper">
       <a class="main-nav__logo">
         <img src="img/mishka-logo-mobile.png" alt="logo" class="main-nav__img" width="86" height="35">
       </a>
       <button type="button" class="main-nav__toggler main-nav__toggler--open btn" id="jsTopBtn">открыть меню</button>
     </div>
-    <div class="main-nav__wrapper hidden">
+    <div class="main-nav__wrapper main-nav__wrapper--closed">
       <ul class="main-nav__menu main-menu">
         <li class="main-menu__item">
           <a href="catalog.html" class="main-menu__link">Каталог товаров</a>
