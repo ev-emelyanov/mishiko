@@ -16,10 +16,18 @@
 
   background-color: #fff;
 
-  &--closed {
-    position: relative;
-    top: 0;
+  &--opened {
+    display: block;
   }
+
+  &--closed {
+    display: none;
+  }
+}
+
+.main-nav--nojs .main-nav__wrapper {
+  position: relative;
+  top: 0;
 }
 
 .main-nav--nojs .main-nav__toggler {
@@ -75,4 +83,36 @@
 .main-nav__menu {
   width: 100%;
   margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__toggler {
+    display: none;
+  }
+
+  .main-nav__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 670px;
+    background: transparent;
+
+    &--closed {
+      display: block;
+    }
+  }
+
+  .main-nav__logo-wrapper {
+    width: 670px;
+  }
+
+  .main-nav__logo {
+    height: 89px;
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+
 }
