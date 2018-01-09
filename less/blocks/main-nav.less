@@ -95,7 +95,7 @@
     top: 0;
     left: 0;
     margin: 0 auto;
-    width: 670px;
+    max-width: @tablet-width-no-padding;
     background: transparent;
 
     &--closed {
@@ -104,7 +104,7 @@
   }
 
   .main-nav__logo-wrapper {
-    width: 670px;
+    max-width: @tablet-width-no-padding;
   }
 
   .main-nav__logo {
@@ -114,5 +114,15 @@
 }
 
 @media (min-width: @desktop-width) {
+  .main-nav__wrapper {
+    max-width: @desktop-width-no-padding;
+  }
 
+  .main-nav__logo {
+    text-align: center;
+  }
+
+  .main-nav__logo-wrapper {
+    max-width: @desktop-width-no-padding;
+  }
 }
