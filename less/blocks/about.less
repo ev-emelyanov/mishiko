@@ -3,55 +3,59 @@
 }
 
 .about__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   list-style: none;
-  margin-top: 25px;
   padding-left: 0;
   .title_3();
+  margin-top: 10px;
 }
 
 .about__item {
+  flex-basis: 48px;
+  width: 250px;
   position: relative;
   top: 0;
-  height: 55px;
   margin-top: 75px;
-}
 
-.about__item::before {
-  .pseudo(-45px, 0, auto, 40px);
-  background: url("/img/sprite.png") no-repeat;
-}
-
-.about__item--bloom::before {
-  width: 32px;
-  background-position: -543px -5px;
-}
-
-.about__item--money::before {
-  width: 47px;
-  height: 28px;
-  background-position: -608px -68px;
-}
-
-.about__item--heart::before {
-  width: 34px;
-  height: 29px;
-  background-position: -618px -3px;
-}
-
-.about__item--ball::before {
-  width: 35px;
-  height: 35px;
-  background-position: -579px -3px;
-}
-
-.about__item--racket::before {
-  width: 55px;
-  height: 25px;
-  background-position: -542px -68px;
-}
-
-.about__item--gift::before {
-  width: 35px;
-  height: 34px;
-  background-position: -655px -3px;
+  &::before {
+    .pseudo(-45px, 0, auto, 40px);
+    background: url("/img/sprite.png") no-repeat;
+  }
+  
+  &--bloom::before {
+    width: 32px;
+    background-position: -543px -5px;
+  }
+  
+  &--money::before {
+    width: 47px;
+    height: 28px;
+    background-position: -608px -68px;
+  }
+  
+  &--heart::before {
+    width: 34px;
+    height: 29px;
+    background-position: -618px -3px;
+  }
+  
+  &--ball::before {
+    width: 35px;
+    height: 35px;
+    background-position: -579px -3px;
+  }
+  
+  &--racket::before {
+    width: 55px;
+    height: 25px;
+    background-position: -542px -68px;
+  }
+  
+  &--gift::before {
+    width: 35px;
+    height: 34px;
+    background-position: -655px -3px;
+  }
 }

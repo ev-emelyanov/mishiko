@@ -16,7 +16,8 @@
 .main-content__about,
 .main-content__reviews,
 .main-content__contacts {
-  margin: 30px 30px 0;
+  .center-alignment(@mobile-width);
+  padding: 0 @mobile-padding 0;
 }
 
 .main-content__nav {
@@ -25,7 +26,8 @@
 
 @media (min-width: @tablet-width) {
   .main-content__header {
-    height: 625px;
+    height: 745px;
+    margin-bottom: -120px;
     background: url("/img/top-bg-dskt.jpg") no-repeat center -1px;
   }
 
