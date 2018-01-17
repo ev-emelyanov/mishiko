@@ -1,11 +1,10 @@
 .props-table {
   border-collapse: collapse;
-  width: 100%;
 }
 
 .props-table__cell {
   border-bottom: 1px solid #CCC;
-  padding: 9px 0;
+  padding: 10px 0;
   color: @clr-paragraph;
   font-size: @base-fz;
   line-height: @big-link-lh;
@@ -13,4 +12,11 @@
 
 .props-table__cell:first-child {
   width: 38%;
+}
+
+@media (min-width: @tablet-width) {
+  .props-table__cell:first-child {
+    width: 96px;
+  }
+
 }

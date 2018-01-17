@@ -4,7 +4,7 @@
   "description": "miho",
   "private": true,
   "devDependencies": {
-    "@htmlacademy/editorconfig-cli": "0.1.x",
+    "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "7.1.x",
     "browser-sync": "2.18.x",
     "gulp": "3.9.x",
@@ -15,14 +15,6 @@
     "stylelint": "8.1.x",
     "stylelint-config-htmlacademy": "0.1.x"
   },
-  "editorconfig-cli": [
-    "*.html",
-    "*.json",
-    "*.js",
-    "js/**/*.js",
-    "img/**/*.svg",
-    "less/**/*.less"
-  ],
   "browserslist": [
     "last 2 versions",
     "IE 11",
@@ -35,6 +27,14 @@
     "build": "gulp style",
     "start": "gulp serve"
   },
+  "editorconfig-cli": [
+    "*.html",
+    "*.json",
+    "*.js",
+    "js/**/*.js",
+    "img/**/*.svg",
+    "less/**/*.less"
+  ],
   "author": "me",
   "license": "ISC"
 }
