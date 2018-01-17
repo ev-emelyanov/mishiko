@@ -92,7 +92,7 @@
     align-self: flex-start;
     flex-basis: 100%;
     width: 335px;
-    margin-bottom: 0;
+    margin: 0;
   }
 
   .hit__description {
@@ -108,5 +108,44 @@
 }
 
 @media (min-width: @desktop-width) {
+  .hit {
+    position: relative;
+    .center-alignment(@desktop-width);
+    padding: 0 25px;
+  }
 
+  .hit__header {
+    position: absolute;
+    top: 50px;
+  }
+
+  .hit__title {
+    width: 870px;
+    order: 1;
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .hit__type {
+    width: 170px;
+    margin-top: 10px;
+  }
+
+  .hit__goods {
+    width: 875px;
+    height: 630px;
+    margin-left: auto;
+  }
+
+  .hit__description {
+    margin-top: 155px;
+  }
+
+  .hit__props {
+    margin-top: 45px;
+  }
+
+  .hit__img {
+    width: 525px;
+  }
 }

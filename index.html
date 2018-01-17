@@ -78,7 +78,12 @@
           <td class="props-table__cell">15 см.</td>
         </tr>
       </table>
-      <img src="img/triple-set-mobile.jpg" alt="" class="hit__img">
+      <p class="hit__img">
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/triple-set-desktop.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+          <img src="img/triple-set-mobile.jpg" srcset="img/triple-set-mobile@2x.jpg 2x">
+        </picture>
+      </p>
       <p class="hit__price">Цена: 990 руб.</p>
       <a href="buy.html" class="hit__buy-btn btn">заказать</a>
     </figure>
