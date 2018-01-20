@@ -28,18 +28,19 @@
   align-items: flex-end;
   justify-content: space-between;
 
-  margin: 50px 0 20px;
+  margin: 20px 0;
 }
 
 .hit__img {
   width: 260px;
   height: 315px;
+  margin-top: 30px;
   margin-bottom: 20px;
 }
 
 .hit__props {
   width: 100%;
-  margin-top: 35px;
+  margin-top: 15px;
   margin-bottom: auto;
 }
 
@@ -55,7 +56,6 @@
 
 @media (min-width: @tablet-width) {
   .hit {
-    .center-alignment(@tablet-width);
     padding: 30px @tablet-padding 0;
   }
 
@@ -81,10 +81,16 @@
   .hit__goods {
     flex-wrap: wrap-reverse;
     height: 410px;
+
+    margin: 50px 0 20px;
   }
 
   .hit__goods > * {
     width: 290px;
+  }
+
+  .hit__props {
+    margin-top: 35px;
   }
 
   .hit__img {
@@ -110,7 +116,6 @@
 @media (min-width: @desktop-width) {
   .hit {
     position: relative;
-    .center-alignment(@desktop-width);
     padding: 0 25px;
   }
 

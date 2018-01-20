@@ -49,3 +49,20 @@
 .slider__btn--prev::before {
   top: 13px;
 }
+
+@media (min-width: @tablet-width) {
+  .slider__toggler {
+    margin-top: 0;
+  }
+
+  .slider__btn {
+    border: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider__toggler {
+    position: relative;
+    top: -35px;
+  }
+}

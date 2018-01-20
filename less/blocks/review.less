@@ -17,3 +17,38 @@
   line-height: 30px;
   font-style: normal;
 }
+
+@media (min-width: @tablet-width) {
+  .review__text {
+    font-size: @big-link-fz;
+    line-height: 30px;
+    margin-bottom: 5px;
+    max-height: 170px;
+    overflow-y: hidden;
+  }
+
+  .review__author {
+    position: absolute;
+    top: 170px;
+    line-height: @base-lh;
+  }
+
+  .review__twitter {
+    position: absolute;
+    top: 195px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .review__text {
+    max-height: 110px;
+  }
+
+  .review__author {
+    top: 130px;
+  }
+
+  .review__twitter {
+    top: 150px;
+  }
+}

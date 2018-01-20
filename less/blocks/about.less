@@ -63,13 +63,12 @@
 
 @media (min-width: @tablet-width) {
   .about {
-    .center-alignment(@tablet-width);
     padding: 0 @tablet-padding;
   }
 
   .about__title,
   .about__list {
-    width: 875px;
+    max-width: 875px;
     margin-left: auto;
   }
 
@@ -93,12 +92,19 @@
 
 @media (min-width: @desktop-width) {
   .about {
-    .center-alignment(@desktop-width);
     padding: 0 25px;
   }
 
   .about__title {
     font-size: 53px;
     line-height: 57px;
+  }
+
+  .about__list {
+    align-content: flex-start;
+  }
+
+  .about__item {
+    width: 350px;
   }
 }
