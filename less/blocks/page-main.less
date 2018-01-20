@@ -6,7 +6,24 @@
   width: 100%;
   height: 7px;
 
-  margin: 20px 0;
+  margin: 35px auto;
 
-  background: url("/img/zigzag-line.png") repeat-x;
+  background: transparent url("/img/svg/zigzag-grey.svg") repeat-x;
+  background-size: auto 7px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main__zigzag {
+    height: 17px;
+    margin: 50px auto 60px;
+    background-size: auto 17px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main__zigzag {
+    height: 23px;
+    margin: 70px auto;
+    background-size: auto 23px;
+  }
 }
