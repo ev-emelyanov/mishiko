@@ -59,3 +59,46 @@
     background-position: -655px -3px;
   }
 }
+
+
+@media (min-width: @tablet-width) {
+  .about {
+    .center-alignment(@tablet-width);
+    padding: 0 @tablet-padding;
+  }
+
+  .about__title,
+  .about__list {
+    width: 875px;
+    margin-left: auto;
+  }
+
+  .about__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .about__list {
+    justify-content: space-between;
+    height: 440px;
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .about__item {
+    width: 340px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about {
+    .center-alignment(@desktop-width);
+    padding: 0 25px;
+  }
+
+  .about__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
