@@ -1,28 +1,24 @@
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 184px;
+
+  margin: 20px auto 0;
+
+  &:hover .copyright__logo {
+    fill: #46c1ae;
+  }
+
+  &:active {
+    opacity: .3;
+  }
+}
+
 .copyright__title {
   font-size: @form-fz;
   line-height: 19px;
   text-transform: capitalize;
   color: @clr-main-text;
   .link-decor();
-}
-
-.copyright__logo {
-  position: relative;
-}
-
-.copyright__logo::before {
-  .pseudo(-7px, 30px, 27px, 35px);
-  background: url("/img/htmlacademy.png") no-repeat 0 -38px;
-}
-
-.copyright__link:hover .copyright__logo::before {
-  background-position: 0 0;
-}
-
-.copyright__link:active .copyright__logo::before {
-  background-position: 0 -76px;
-}
-
-.copyright__link:active .copyright__title {
-  color: fade(@clr-main-text, 30%);
 }

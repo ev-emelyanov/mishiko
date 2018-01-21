@@ -13,6 +13,8 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var run = require("run-sequence");
 var del = require("del");
+var cheerio = require('gulp-cheerio');
+var imagemin = require("gulp-imagemin");
 
 gulp.task("style", function() {
     gulp.src("less/style.less")
@@ -46,7 +48,7 @@ gulp.task('css', function() {
 
 gulp.task('sprite', function () {
     return gulp
-        .src("img/svg/**/*.svg")
+        .src("img/svg-for-sprite/**/*.svg")
         .pipe(svgstore({
             inlineSvg: true
         }))
@@ -86,6 +88,34 @@ gulp.task('copy', function () {
         .pipe(gulp.dest("build"));
 });
 
+gulp.task('images', function () {
+    return gulp
+        .src("build/img/**/*.{jpg,png,svg}")
+        .pipe(cheerio({
+            run: function ($) {
+                $('[fill]').removeAttr('fill');
+                $('[stroke]').removeAttr('stroke');
+                $('[style]').removeAttr('style');
+            },
+            parserOptions: {xmlMode: true}
+        }))
+        .pipe(imagemin([
+            imagemin.optipng({optimizationLevel: 3}),
+            imagemin.jpegtran({progressive: true}),
+            imagemin.svgo({
+                plugins: [{
+                    removeStyleElement: true
+                }, {
+                    removeEditorsNSData: true
+                }, {
+                    cleanupIDs: false
+                }]
+            })
+        ]))
+        .pipe(gulp.dest("build/img"));
+});
+
 gulp.task('clean', function () {
     return del("build");
 });
+// после запуска билда надо запустить оптимизацию изображений (images)

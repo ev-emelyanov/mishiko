@@ -9,9 +9,7 @@
   <title>Main</title>
 </head>
 <body class="page-main">
-<div style="display: none;">
-  <include src="build/img/sprite.svg"></include>
-</div>
+
 <div class="modal__fade" style="display: none;"></div>
 <header class="page-main__header main-header">
   <nav class="main-header__nav main-nav main-nav--nojs">
@@ -90,7 +88,7 @@
       <p class="hit__price">Цена: 990 руб.</p>
       <a href="buy.html" class="hit__buy-btn btn">заказать</a>
     </figure>
-    
+  
   </article>
   <div class="page-main__zigzag"></div>
   <section class="main-content__about about">
@@ -139,20 +137,36 @@
   </footer>
 </main>
 <footer class="main-footer">
-  <div class="container">
-    <div class="main-footer__social social">
-      <ul class="social__list">
-        <li class="social__item"><a href="#" class="social__link social__link--instagram"><span class="visually-hidden">instagram</span></a></li>
-        <li class="social__item"><a href="#" class="social__link social__link--facebook"><span class="visually-hidden">facebook</span></a></li>
-        <li class="social__item"><a href="#" class="social__link social__link--twitter"><span class="visually-hidden">twitter</span></a></li>
-      </ul>
-    </div>
-    <div class="main-footer__copyright copyright">
-      <a href="#" class="copyright__link" title="логотип htmlacademy">
-        <b class="copyright__title">разработано</b>
-        <span class="copyright__logo"></span>
-      </a>
-    </div>
+  <div class="main-footer__logo">
+  
+  </div>
+  <div class="main-footer__social social">
+    <ul class="social__list">
+      <li class="social__item">
+        <a href="#" class="social__link">
+          <svg class="social__link--instagram" width="40" height="40" fill="#231F20"><use xlink:href="/img/sprite.svg#instagram"></use></svg>
+          <span class="visually-hidden">instagram</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="#" class="social__link">
+          <svg class="social__link--facebook" width="40" height="40" fill="#231F20"><use xlink:href="/img/sprite.svg#facebook"></use></svg>
+          <span class="visually-hidden">facebook</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="#" class="social__link">
+          <svg class="social__link--twitter" width="40" height="40" fill="#231F20"><use xlink:href="/img/sprite.svg#twitter"></use></svg>
+          <span class="visually-hidden">twitter</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="main-footer__copyright copyright">
+    <a href="#" class="copyright__link" title="логотип htmlacademy">
+      <b class="copyright__title">разработано</b>
+      <svg class="copyright__logo" width="27" height="34" fill="#63d1bb"><use xlink:href="/img/sprite.svg#logo-developer"></use></svg>
+    </a>
   </div>
 </footer>
 
