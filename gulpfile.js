@@ -53,6 +53,14 @@ gulp.task('sprite', function () {
             inlineSvg: true
         }))
         .pipe(rename("sprite.svg"))
+        .pipe(cheerio({
+            run: function ($) {
+                $('[fill]').removeAttr('fill');
+                $('[stroke]').removeAttr('stroke');
+                $('[style]').removeAttr('style');
+            },
+            parserOptions: {xmlMode: true}
+        }))
         .pipe(gulp.dest("build/img"));
 });
 
@@ -91,14 +99,6 @@ gulp.task('copy', function () {
 gulp.task('images', function () {
     return gulp
         .src("build/img/**/*.{jpg,png,svg}")
-        .pipe(cheerio({
-            run: function ($) {
-                $('[fill]').removeAttr('fill');
-                $('[stroke]').removeAttr('stroke');
-                $('[style]').removeAttr('style');
-            },
-            parserOptions: {xmlMode: true}
-        }))
         .pipe(imagemin([
             imagemin.optipng({optimizationLevel: 3}),
             imagemin.jpegtran({progressive: true}),

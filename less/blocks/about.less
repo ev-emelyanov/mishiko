@@ -9,57 +9,48 @@
   list-style: none;
   padding-left: 0;
   .title_3();
-  margin-top: 10px;
+  margin-top: 20px;
+
+  & svg {
+    fill: #63d1bb;
+  }
 }
 
 .about__item {
-  flex-basis: 48px;
-  width: 250px;
-  position: relative;
-  top: 0;
-  margin-top: 75px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 124px;
+  justify-content: space-evenly;
 
-  &::before {
-    .pseudo(-45px, 0, auto, 40px);
-    background: url("/img/sprite.png") no-repeat;
+  &--bloom {
+    width: 33px;
+    height: 38px;
   }
-  
-  &--bloom::before {
-    width: 32px;
-    background-position: -543px -5px;
-  }
-  
-  &--money::before {
+  &--money {
     width: 47px;
-    height: 28px;
-    background-position: -608px -68px;
+    height: 27px;
   }
-  
-  &--heart::before {
+  &--heart {
     width: 34px;
-    height: 29px;
-    background-position: -618px -3px;
+    height: 27px;
   }
-  
-  &--ball::before {
-    width: 35px;
-    height: 35px;
-    background-position: -579px -3px;
-  }
-  
-  &--racket::before {
-    width: 55px;
-    height: 25px;
-    background-position: -542px -68px;
-  }
-  
-  &--gift::before {
+  &--ball {
     width: 35px;
     height: 34px;
-    background-position: -655px -3px;
+  }
+  &--racket {
+    width: 55px;
+    height: 23px;
+  }
+  &--gift {
+    width: 33px;
+    height: 32px;
   }
 }
 
+.about__text {
+  display: block;
+}
 
 @media (min-width: @tablet-width) {
   .about {
