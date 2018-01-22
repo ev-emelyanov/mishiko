@@ -19,3 +19,49 @@
 .contacts__info {
   margin-bottom: 40px;
 }
+
+.contacts__flag {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .contacts__title {
+    margin-top: 20px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .contacts__flag {
+    display: inline-block;
+    width: 51px;
+    height: 83px;
+    margin-left: auto;
+  }
+
+  .contact-table {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
+
+  .contacts__map {
+    width: @tablet-width;
+    margin: 0 -50px;
+  }
+
+  .contacts__callback {
+    width: 230px;
+    margin: 55px auto 0;
+    align-self: center;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+
+}

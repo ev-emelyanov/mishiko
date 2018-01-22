@@ -16,3 +16,25 @@
 .contact-table__cell:nth-of-type(even) {
   flex-basis: 180px;
 }
+
+@media (min-width: @tablet-width) {
+  .contact-table {
+    flex-wrap: nowrap;
+    font-size: @big-link-fz;
+  }
+
+  .contact-table__cell:nth-of-type(odd) {
+    flex-basis: 75px;
+    margin-right: 0;
+  }
+
+  .contact-table__cell:nth-of-type(even) {
+    flex-basis: 260px;
+  }
+
+}
+
+
+@media (min-width: @desktop-width) {
+
+}

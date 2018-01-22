@@ -30,6 +30,7 @@
 
 .main-content__contacts {
   margin-top: 45px;
+  border-top: 1px solid transparent; // для отталкивания маргина внутреннего элемента
 }
 
 @media (min-width: @tablet-width) {
@@ -39,6 +40,10 @@
   .main-content__reviews,
   .main-content__contacts {
     .center-alignment(@tablet-width);
+  }
+
+  .main-content__contacts {
+    padding: 0 @tablet-padding;
   }
 
   .main-content__header {
