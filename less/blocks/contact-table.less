@@ -20,7 +20,7 @@
 @media (min-width: @tablet-width) {
   .contact-table {
     flex-wrap: nowrap;
-    font-size: @big-link-fz;
+    width: 100%;
   }
 
   .contact-table__cell:nth-of-type(odd) {
@@ -34,7 +34,9 @@
 
 }
 
-
 @media (min-width: @desktop-width) {
-
+  .contact-table {
+    width: 340px;
+    flex-wrap: wrap;
+  }
 }
