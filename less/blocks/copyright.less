@@ -15,10 +15,20 @@
   }
 }
 
+.copyright__logo {
+  margin-top: 5px;
+}
+
 .copyright__title {
   font-size: @form-fz;
   line-height: 19px;
   text-transform: capitalize;
   color: @clr-main-text;
   .link-decor();
+}
+
+@media (min-width: @tablet-width) {
+  .copyright__link {
+    margin-top: 25px;
+  }
 }
