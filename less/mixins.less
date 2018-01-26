@@ -47,11 +47,11 @@
 .link-color() {
   color: @clr-main-text;
 
-  &:hover {
+  &[href]:hover {
     color: @clr-main-text-hover;
   }
 
-  &:active {
+  &[href]:active {
     color: @clr-main-text-down;
   }
 }
@@ -71,12 +71,12 @@
   text-align: center;
   border: 2px solid @clr-dark-grey;
 
-  &:hover {
+  &[href]:hover {
     color: @clr-white-btn;
     background: @clr-dark-grey;
   }
 
-  &:active {
+  &[href]:active {
     color: fade(@clr-white-btn, 30%);
     background: @clr-dark-grey;
   }

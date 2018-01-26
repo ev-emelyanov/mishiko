@@ -10,40 +10,54 @@
 </head>
 <body class="page-catalog">
 
+<div class="modal__fade" style="display: none;"></div>
 <header class="page-catalog__header main-header">
-  <a href="index.html" class="main-header__logo">
-    <img src="http://placehold.it/86x35" alt="logo" class="main-header__img">
-  </a>
-  <nav class="main-header__nav main-nav">
-    <button type="button" class="main-nav__toggler btn">открыть меню</button>
-    <div class="main-nav__wrapper">
+  <nav class="main-header__nav main-nav main-nav--nojs">
+    <div class="main-nav__logo-wrapper">
+      <a href="/" class="main-nav__logo">
+        <picture class="main-nav__img">
+          <source media="(min-width: 1100px)" srcset="img/svg/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/svg/logo-tablet-top.svg">
+          <img src="img/svg/logo-mobile.svg" alt="logo" width="86" height="35">
+        </picture>
+      </a>
+      <button type="button" class="main-nav__toggler main-nav__toggler--open btn" id="jsTopBtn">открыть меню</button>
+    </div>
+    <div class="main-nav__wrapper main-nav__wrapper--opened">
       <ul class="main-nav__menu main-menu">
         <li class="main-menu__item">
-          <a href="catalog.html" class="main-menu__link">Каталог товаров</a>
+          <a class="main-menu__link">Каталог товаров</a>
         </li>
         <li class="main-menu__item">
-          <a class="main-menu__link">Вязание на заказ</a>
+          <a href="form.html" class="main-menu__link">Вязание на заказ</a>
         </li>
-        <li class="main-menu__item main-menu__item--search">
-          <a href="#" class="main-menu__link">Поиск по сайту</a>
+        <li class="main-menu__item">
+          <a href="#" class="main-menu__link main-menu__link--search">Поиск по сайту</a>
         </li>
-        <li class="main-menu__item main-menu__item--cart">
-          <a href="#" class="main-menu__link">Корзина: пока пуста</a>
+        <li class="main-menu__item">
+          <a href="#" class="main-menu__link main-menu__link--cart">Корзина: пока пуста</a>
+        </li>
+        <li class="main-menu__item main-menu__item--desktop-only">
+          <a href="goods-receipt.html" class="main-menu__link">Новые поступления</a>
+        </li>
+        <li class="main-menu__item main-menu__item--desktop-only">
+          <a href="sales.html" class="main-menu__link">Распродажа</a>
         </li>
       </ul>
+      <div class="main-header__delivery-info">Бесплатная доставка по России</div>
     </div>
   </nav>
 </header>
 
 <main class="page-catalog__content catalog">
   <header class="catalog__header">
-    <h1 class="catalog__title">Вязание на заказ</h1>
+    <h1 class="catalog__title">Каталог товаров</h1>
   </header>
   <article class="catalog__item product-cart">
     <h2 class="visually-hidden">Зайчик-попрыгайчик</h2>
     <a href="#" class="product-cart__link">
       <figure class="product-cart__pic">
-        <img src="http://placehold.it/260x195" alt="" class="product-cart__img">
+        <img src="http://placehold.it/260x195" alt="" class="product-cart__img" width="260">
         <figcaption class="product-cart__name">Зайчик-попрыгайчик</figcaption>
       </figure>
     </a>
@@ -58,7 +72,7 @@
     <h2 class="visually-hidden">Корзинка для белья</h2>
     <a href="#" class="product-cart__link">
       <figure class="product-cart__pic">
-        <img src="http://placehold.it/260x195" alt="" class="product-cart__img">
+        <img src="http://placehold.it/260x195" alt="" class="product-cart__img" width="260">
         <figcaption class="product-cart__name">Корзинка для белья</figcaption>
       </figure>
     </a>
@@ -73,7 +87,7 @@
     <h2 class="visually-hidden">Большая корзинка для игрушек</h2>
     <a href="#" class="product-cart__link">
       <figure class="product-cart__pic">
-        <img src="http://placehold.it/260x195" alt="" class="product-cart__img">
+        <img src="http://placehold.it/260x195" alt="" class="product-cart__img" width="260">
         <figcaption class="product-cart__name">Большая корзинка для игрушек</figcaption>
       </figure>
     </a>
@@ -93,30 +107,74 @@
 </main>
 
 <footer class="main-footer">
-  <div class="main-footer__social social">
-    <ul class="social__list">
-      <li class="social__item social__item--instagram"><a href="#" class="social__link">instagram</a></li>
-      <li class="social__item social__item--facebook"><a href="#" class="social__link">facebook</a></li>
-      <li class="social__item social__item--twitter"><a href="#" class="social__link">twitter</a></li>
-    </ul>
+  <div class="main-footer__wrapper">
+    <a href="/" class="main-footer__logo">
+      <svg width="102" height="34" fill="#231F20">
+        <use xlink:href="img/sprite.svg#logo-bottom"></use>
+      </svg>
+    </a>
+    <div class="main-footer__social social">
+      <ul class="social__list">
+        <li class="social__item">
+          <a href="#" class="social__link">
+            <svg class="social__link--instagram" width="40" height="40" fill="#231F20">
+              <use xlink:href="/img/sprite.svg#instagram"></use>
+            </svg>
+            <span class="visually-hidden">instagram</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link">
+            <svg class="social__link--facebook" width="40" height="40" fill="#231F20">
+              <use xlink:href="/img/sprite.svg#facebook"></use>
+            </svg>
+            <span class="visually-hidden">facebook</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link">
+            <svg class="social__link--twitter" width="40" height="40" fill="#231F20">
+              <use xlink:href="/img/sprite.svg#twitter"></use>
+            </svg>
+            <span class="visually-hidden">twitter</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="main-footer__copyright copyright">
+      <a href="#" class="copyright__link" title="логотип htmlacademy">
+        <b class="copyright__title">разработано</b>
+        <svg class="copyright__logo" width="27" height="34" fill="#63d1bb">
+          <use xlink:href="/img/sprite.svg#logo-developer"></use>
+        </svg>
+      </a>
+    </div>
   </div>
-  <div class="main-footer__copyright copyright">
-    <b class="copyright__title">разработано</b>
-    <a href="#" class="copyright__link"><img src="http://placehold.it/27x34" alt="" class="copyright__logo"></a>
-  </div>
+
 </footer>
 
-<div class="modal modal-cart">
-  <h2 class="modal__title">добавить в корзину</h2>
-  <p class="modal__hint">выберите размер:</p>
+<div class="modal modal-cart" style="display: none;">
+  <h2 class="modal__title">добавить<br>
+                           в корзину</h2>
+  <p class="modal__hint">Выберите размер:</p>
   <form action="https://echo.htmlacademy.ru" class="modal-cart__list" name="cart">
-    <label class="modal-cart__label"><input class="modal-cart__size" type="radio" name="size" value="s">s</label>
-    <label class="modal-cart__label"><input class="modal-cart__size" type="radio" name="size" value="m">m</label>
-    <label class="modal-cart__label"><input class="modal-cart__size" type="radio" name="size" value="l">l</label>
+    <ul class="modal-cart__container">
+      <li class="modal-cart__item">
+        <input class="modal-cart__size" type="radio" name="size" value="s" id="order-s">
+        <label class="modal-cart__label" for="order-s">s</label>
+      </li>
+      <li class="modal-cart__item">
+        <input class="modal-cart__size" type="radio" name="size" value="m" id="order-m">
+        <label class="modal-cart__label" for="order-m">m</label>
+      </li>
+      <li class="modal-cart__item">
+        <input class="modal-cart__size" type="radio" name="size" value="l" id="order-l">
+        <label class="modal-cart__label" for="order-l">l</label>
+      </li>
+    </ul>
     <button class="modal-cart__btn btn" type="submit">добавить</button>
   </form>
-  <div class="modal__fade"></div>
 </div>
-
+<script src="js/scripts.js"></script>
 </body>
 </html>
