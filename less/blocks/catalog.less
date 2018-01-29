@@ -16,6 +16,12 @@
   .center-alignment(@mobile-width);
 }
 
+.catalog__video {
+  .center-alignment(@mobile-width);
+  margin-top: 30px;
+  padding: 0 @mobile-padding;
+}
+
 
 @media (min-width: @tablet-width) {
   .catalog__title {
@@ -30,6 +36,11 @@
   .catalog__header {
     height: 225px;
     width: 100%;
+  }
+
+  .catalog__video {
+    .center-alignment(@tablet-width);
+    padding: 0 @tablet-padding;
   }
 }
 

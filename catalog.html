@@ -136,10 +136,23 @@
     </article>
   </div>
   <section class="catalog__video video-block">
-    <h2 class="video-block__title">Процесс производства</h2>
-    <div class="video-block__video"></div>
-    <p class="video-block__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-    <a href="#" class="video-block__order btn">сделать заказ</a>
+    <div class="video-block__wrapper">
+      <div class="video-block__header">
+        <svg class="video-block__camera" width="32" height="22" fill="#63d1bb">
+          <use xlink:href="img/sprite.svg#camera"></use>
+        </svg>
+        <h2 class="video-block__title">Процесс производства</h2>
+      </div>
+      <div class="video-block__video">
+        <picture>
+          <source media="(min-width: 1100px)" srcset="img/video-desktop.jpg, img/video-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/video-tablet.jpg, img/video-tablet@2x.jpg 2x">
+          <img src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x">
+        </picture>
+      </div>
+      <p class="video-block__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+      <a href="#" class="video-block__order btn">сделать заказ</a>
+    </div>
   </section>
 </main>
 
