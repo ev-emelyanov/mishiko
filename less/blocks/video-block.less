@@ -1,9 +1,38 @@
-.video-block {
-  //min-height: 503px;
+.video-block__video {
+  display: block;
+  position: relative;
+}
+
+.video-block__play {
+  position: absolute;
+  top: 50%;
+  margin-top: -38px;
+  left: 50%;
+  margin-left: -50px;
+
+  //& .st0{fill:#63D1BB;}
+  //& .st1{fill:#fff;}
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    transform: scale(0.8);
+    opacity: .3;
+  }
 }
 
 .video-block__wrapper {
   border: 1px solid #ececec;
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+  }
 }
 
 .video-block__header {
