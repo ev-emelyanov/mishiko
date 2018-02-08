@@ -71,7 +71,8 @@
 					</label>
 				</div>
 			</section>
-			<section class="form-content__section order-form__color">
+			<div class="form-content__section-wrapper">
+				<section class="form-content__section order-form__color">
 				<h2 class="order-form__title">цвет</h2>
 				<div class="order-form__fields">
 					<label class="order-form__label order-form__label--checkbox">
@@ -106,18 +107,26 @@
 					</label>
 				</div>
 			</section>
+			</div>
 			<section class="form-content__section order-form__fio">
 				<h2 class="order-form__title">фио</h2>
 				<div class="order-form__fields--text">
-					<label class="order-form__label order-form__label--text" for="firstname">Имя:</label>
-					<input class="order-form__input order-form__input-text" type="text" id="firstname" name="firstname" placeholder="Введите ваше имя *" required>
-					<label class="order-form__label order-form__label--text" for="lastname">Фамилия:</label>
-					<input class="order-form__input order-form__input-text" type="text" id="lastname" name="lastname" placeholder="Укажите фамилию *" required>
-					<label class="order-form__label order-form__label--text" for="patronymic">Отчество:</label>
-					<input class="order-form__input order-form__input-text" type="text" id="patronymic" name="patronymic" placeholder="Отчество, если желаете">
+					<div class="order-form__fio-wrapper">
+						<label class="order-form__label order-form__label--text" for="firstname">Имя:</label>
+						<input class="order-form__input order-form__input-text" type="text" id="firstname" name="firstname" placeholder="Введите ваше имя *" required>
+					</div>
+					<div class="order-form__fio-wrapper">
+						<label class="order-form__label order-form__label--text" for="lastname">Фамилия:</label>
+						<input class="order-form__input order-form__input-text" type="text" id="lastname" name="lastname" placeholder="Укажите фамилию *" required>
+					</div>
+					<div class="order-form__fio-wrapper">
+						<label class="order-form__label order-form__label--text" for="patronymic">Отчество:</label>
+						<input class="order-form__input order-form__input-text" type="text" id="patronymic" name="patronymic" placeholder="Отчество, если желаете">
+					</div>
 				</div>
 			</section>
-			<section class="form-content__section order-form__phone">
+			<div class="form-content__section-wrapper">
+				<section class="form-content__section order-form__phone">
 				<h2 class="order-form__title">тел</h2>
 				<div class="order-form__fields--phone">
 					<label class="visually-hidden" for="phone">телефон:</label>
@@ -125,7 +134,7 @@
 					<svg class="order-form__phone-icon" width="25" height="25"><use xlink:href="img/sprite.svg#phone"></use></svg>
 				</div>
 			</section>
-			<section class="form-content__section order-form__email">
+				<section class="form-content__section order-form__email">
 				<h2 class="order-form__title">e-mail</h2>
 				<div class="order-form__fields--email">
 					<label class="visually-hidden" for="email">e-mail</label>
@@ -133,6 +142,7 @@
 					<svg class="order-form__email-icon" width="32" height="21"><use xlink:href="img/sprite.svg#email"></use></svg>
 				</div>
 			</section>
+			</div>
 			<section class="form-content__section order-form__textarea-block">
 				<h2 class="order-form__title">доп</h2>
 				<div class="order-form__fields--textarea">
@@ -140,8 +150,10 @@
 					<textarea class="order-form__textarea" id="adding" name="adding" placeholder="Опишите все ваши пожелания к заказу"></textarea>
 				</div>
 			</section>
-			<small class="order-form__legend"><sup>*</sup>Поля обязательны для заполнения</small>
-			<button class="order-form__submit btn" type="submit">отправить заказ</button>
+			<section class="form-content__section order-form__btn-block">
+				<small class="order-form__legend"><sup>*</sup>Поля обязательны для заполнения</small>
+				<button class="order-form__submit btn" type="submit">отправить заказ</button>
+			</section>
 		</form>
 	</div>
 </main>

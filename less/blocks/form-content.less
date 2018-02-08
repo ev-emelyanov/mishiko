@@ -20,8 +20,25 @@
 
 @media (min-width: @tablet-width) {
   .form-content__wrapper {
+    .center-alignment(none);
+    padding: 0;
+  }
+
+  .form-content__intro,
+  .form-content__section {
     .center-alignment(@tablet-width);
     padding: 0 @tablet-padding;
+  }
+
+  .form-content__section-wrapper {
+    margin-top: 30px;
+    padding: 0 0 65px;
+    background: @clr-grey-bg;
+    border-top: 1px solid transparent;
+
+    &:nth-of-type(2) {
+      padding-bottom: 50px;
+    }
   }
 
   .form-content__header {
@@ -31,6 +48,21 @@
   .form-content__title {
     .title_big();
     margin-top: 90px;
+  }
+
+  .form-content__intro{
+    margin-top: 50px;
+    font-size: @big-link-fz;
+    line-height: 30px;
+  }
+
+  .form-content__section-wrapper {
+    width: 100%;
+    background: @clr-grey-bg;
+  }
+
+  .form-content__section {
+    display: flex;
   }
 }
 
