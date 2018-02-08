@@ -68,8 +68,8 @@
 
 @media (min-width: @desktop-width) {
   .form-content__wrapper {
-    .center-alignment(@desktop-width);
-    padding: 0 @desktop-padding;
+    .center-alignment(none);
+    padding: 0;
   }
 
   .form-content__title {
@@ -80,4 +80,18 @@
     .grey-header-desktop();
   }
 
+  .form-content__intro {
+    .center-alignment(700px);
+    margin-top: 95px;
+    padding: 0;
+  }
+
+  .form-content__section-wrapper {
+    padding-bottom: 60px;
+  }
+
+  .form-content__section {
+    .center-alignment(@desktop-width);
+    padding: 0 90px;
+  }
 }
