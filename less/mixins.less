@@ -90,6 +90,16 @@
     color: fade(@clr-white-btn, 30%);
     background: @clr-dark-grey;
   }
+
+  &:hover {
+    color: @clr-white-btn;
+    background: @clr-dark-grey;
+  }
+
+  &:active {
+    color: fade(@clr-white-btn, 30%);
+    background: @clr-dark-grey;
+  }
 }
 
 .pseudo(@top: 0, @left: 0, @width, @height) {
@@ -104,4 +114,22 @@
 .center-alignment(@width) {
   max-width: @width;
   margin: 0 auto;
+}
+
+.grey-header() {
+  height: 175px;
+
+  text-align: center;
+
+  background: @clr-grey-bg;
+  border-top: 1px solid transparent;
+}
+
+.grey-header-tablet() {
+  height: 225px;
+  width: 100%;
+}
+
+.grey-header-desktop() {
+  height: 255px;
 }

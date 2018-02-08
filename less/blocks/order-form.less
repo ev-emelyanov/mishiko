@@ -1,0 +1,218 @@
+.order-form__title {
+  position: relative;
+  margin-top: 25px;
+
+  color: @clr-green;
+
+  text-transform: uppercase;
+  font-size: @big-link-fz;
+  line-height: 16px;
+
+  &::after {
+    .pseudo(50%, unset, 198px, 1px);
+    right: 0;
+    background: @clr-green;
+  }
+}
+
+.order-form__label {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 21px;
+
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  & input[type="checkbox"],
+  & input[type="radio"] {
+    display: none;
+  }
+
+  &:hover .control-indicator::before {
+    border: 2px solid @clr-green
+  }
+
+  &:active .control-indicator::before {
+    border: 2px solid #c7c7c7;
+  }
+
+}
+
+.control-indicator {
+  &::before {
+    .pseudo(12px, 0, 40px, 40px);
+  }
+
+  &::after {
+    .pseudo(24px, 12px, 16px, 16px);
+  }
+}
+
+.order-form__label--radio {
+  height: 60px;
+  margin-top: 0;
+  padding-left: 60px;
+
+  & .control-indicator::before {
+    border: 2px solid #000000;
+    border-radius: 50%;
+  }
+
+  & input:checked + .control-indicator::after {
+    background: @clr-green;
+    border-radius: 50%;
+  }
+}
+
+.order-form__label--checkbox {
+  height: 60px;
+  margin-top: 0;
+  padding-left: 60px;
+
+  & .control-indicator::before {
+    border: 2px solid #000;
+  }
+
+  & input:checked + .control-indicator::after {
+    top: 20px;
+    left: 10px;
+    width: 23px;
+    height: 12px;
+    border-bottom: 2px solid #000;
+    border-left: 2px solid #000;
+    transform: rotate(-45deg);
+  }
+}
+
+.order-form__fields {
+  &--text {
+    margin-top: 30px;
+  }
+}
+
+.order-form__input-text,
+.order-form__input-phone,
+.order-form__input-email {
+  width: 100%;
+  height: 52px;
+
+  border: none;
+  border-bottom: 2px solid #000000;
+
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.order-form__input {
+  cursor: pointer;
+
+  &:hover {
+    border-color: @clr-green;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: @clr-green;
+  }
+
+  &:hover + .order-form__phone-icon,
+  &:hover + .order-form__email-icon {
+    fill: @clr-green;
+  }
+
+  &:focus + .order-form__phone-icon,
+  &:focus + .order-form__email-icon {
+    fill: @clr-green;
+  }
+}
+
+.order-form__input-phone,
+.order-form__input-email {
+  height: 45px;
+  margin-bottom: 7px;
+}
+
+.order-form__fields--phone,
+.order-form__fields--email {
+  position: relative;
+  cursor: pointer;
+}
+
+.order-form__email-icon,
+.order-form__phone-icon {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  fill: #CCC;
+}
+
+.order-form__email-icon {
+  top: 10px;
+  right: 5px;
+}
+
+.order-form__fields--textarea {
+  width: 100%;
+  height: 142px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+
+  &:hover {
+    border-color: @clr-green;
+  }
+
+  &:focus {
+    border-color: @clr-green;
+  }
+
+  & textarea:focus {
+    outline: none;
+    border-color: @clr-green;
+  }
+}
+
+.order-form__textarea {
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+  resize: none;
+  border: 2px solid #000;
+
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.order-form__submit {
+  .white-btn-link();
+  width: 100%;
+  margin: 30px 0 35px;
+  padding: 0;
+}
+
+.order-form__phone {
+  margin-top: 32px;
+}
+
+.order-form__legend {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .order-form__title {
+    &::after {
+      display: none;
+    }
+  }
+
+  .order-form__label--checkbox {
+    & input:checked + .control-indicator::after {
+      width: 31px;
+      height: 17px;
+    }
+  }
+}
