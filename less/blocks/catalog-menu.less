@@ -96,8 +96,22 @@
       height: 125px;
     }
   }
+
+  .catalog-menu__wave {
+    position: relative;
+    top: -12px;
+    z-index: 25;
+    display: block;
+    height: 24px;
+    background: url("/img/svg/wave.svg") repeat-x;
+    background-size: auto 24px;
+  }
 }
 
 @media (min-width: @desktop-width) {
-
+  .catalog-menu__wave {
+    top: -14px;
+    height: 34px;
+    background-size: auto 34px;
+  }
 }
