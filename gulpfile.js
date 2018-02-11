@@ -17,14 +17,6 @@ var cheerio = require('gulp-cheerio');
 var imagemin = require("gulp-imagemin");
 var deploy      = require('gulp-gh-pages');
 
-/**
- * Push build to gh-pages
- */
-gulp.task('deploy', ['build'], function () {
-  return gulp.src("./dist/**/*")
-    .pipe(deploy())
-});
-
 gulp.task("style", function() {
     gulp.src("less/style.less")
         .pipe(plumber())
@@ -128,4 +120,14 @@ gulp.task('images', function () {
 gulp.task('clean', function () {
     return del("build");
 });
+
+/**
+ * Push build to gh-pages
+ */
+gulp.task('deploy', ['build'], function () {
+    return gulp
+        .src("build/**/*")
+        .pipe(deploy());
+});
+
 // после запуска билда надо запустить оптимизацию изображений (images)

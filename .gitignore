@@ -3,6 +3,7 @@
 psd
 /mishka.md
 /node_modules/
+/.publish/
 /less/style.css
 /css/style.css
 /css/style.min.css
