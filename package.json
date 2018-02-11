@@ -21,7 +21,6 @@
     "posthtml-include": "^1.1.0",
     "run-sequence": "^2.2.1",
     "stylelint": "8.1.x",
-    "gift": "0.10.*",
     "stylelint-config-htmlacademy": "0.1.x"
   },
   "browserslist": [
