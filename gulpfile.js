@@ -15,6 +15,15 @@ var run = require("run-sequence");
 var del = require("del");
 var cheerio = require('gulp-cheerio');
 var imagemin = require("gulp-imagemin");
+var deploy      = require('gulp-gh-pages');
+
+/**
+ * Push build to gh-pages
+ */
+gulp.task('deploy', ['build'], function () {
+  return gulp.src("./dist/**/*")
+    .pipe(deploy())
+});
 
 gulp.task("style", function() {
     gulp.src("less/style.less")
