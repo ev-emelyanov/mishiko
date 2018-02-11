@@ -122,11 +122,11 @@ gulp.task('clean', function () {
 });
 
 /**
- * Push build to gh-pages
+ * Push build to gh-pages, ['build']
  */
-gulp.task('deploy', ['build'], function () {
+gulp.task('deploy', function () {
     return gulp
-        .src("build/**/*")
+        .src("./build/**/*")
         .pipe(deploy());
 });
 
